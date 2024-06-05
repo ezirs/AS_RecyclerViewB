@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MahasiswaViewHolder extends RecyclerView.ViewHolder {
     public ImageView _jkImageView;
-    public TextView _jkTextView, _jpTextView, _namaTextView, _nimTextView;
+    public TextView _jkTextView, _jpTextView, _namaTextView, _nimTextView, _noTextView;
     public MahasiswaViewHolder(@NonNull View itemView) {
         super(itemView);
 
@@ -18,5 +18,6 @@ public class MahasiswaViewHolder extends RecyclerView.ViewHolder {
         _jpTextView = (TextView) itemView.findViewById(R.id.jpTextView);
         _namaTextView = (TextView) itemView.findViewById(R.id.namaTextView);
         _nimTextView = (TextView) itemView.findViewById(R.id.nimTextView);
+        _noTextView = (TextView) itemView.findViewById(R.id.noTextView);
     }
 }

@@ -1,7 +1,11 @@
 package com.yorickyoranda.recyclerviewb;
 
 public class MahasiswaModel {
-    private String NIM, Nama, JenisKelamin, JP;
+    private String NIM;
+    private String Nama;
+    private String JenisKelamin;
+    private String JP;
+
 
     public MahasiswaModel() {}
 
@@ -36,4 +40,6 @@ public class MahasiswaModel {
     public void setJP(String JP) {
         this.JP = JP;
     }
+
+
 }

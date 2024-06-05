@@ -1,5 +1,6 @@
 package com.yorickyoranda.recyclerviewb;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,21 +25,26 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaViewHolder> 
         return new MahasiswaViewHolder(v);
     }
 
+    private Integer count;
+
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull MahasiswaViewHolder holder, int position) {
+        this.count = position + 1;
         MahasiswaModel mm = _mahasiswaModelList.get(position);
-
         holder._jkImageView.setImageResource(R.drawable.boy);
 
         if (mm.getJenisKelamin().toLowerCase().equals("perempuan")) holder._jkImageView.setImageResource(R.drawable.girl);
 
         holder._nimTextView.setText(mm.getNIM());
+        holder._noTextView.setText(count.toString());
         holder._namaTextView.setText(mm.getNama());
         holder._jkTextView.setText(mm.getJenisKelamin());
 
         String jp = mm.getJP();
         jp = jp.substring(0, 2);
         holder._jpTextView.setText(jp);
+        this.count++;
     }
 
     @Override
